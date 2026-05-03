@@ -1,0 +1,87 @@
+e.Simple Notes - Privacy Policy
+
+Effective date: 2026-05-03
+
+This Privacy Policy explains how e.Simple Notes ("the Extension") handles information.
+
+1. Data Controller
+
+Owner / Company Name: Mustafa Burak Acarkan – Endor Bilişim
+Contact Email: info@endorbilisim.com
+Address: Esentepe Mahallesi Talatpaşa Caddesi No: 5 / 1 34394 Şişli/İstanbul/Türkiye
+Phone: +90 212 945 42 98
+
+2. Summary
+
+e.Simple Notes is a Chrome side panel extension that provides notes, calculator, timer, theme, language, and notification preferences.
+
+The Extension does not sell personal data.
+The Extension does not use advertising SDKs.
+The Extension does not use third-party analytics.
+The Extension does not send user content to external servers.
+
+3. Information the Extension Stores
+
+The Extension may store the following information in Chrome extension storage on the user's browser profile:
+
+- Notes created by the user
+- Note history and editor content
+- Timer session state, such as remaining time and running/paused/finished status
+- App preferences, such as language and notification settings
+- Theme preference stored in browser local storage
+
+Depending on Chrome availability and quota behavior, some settings may also be mirrored to Chrome sync storage so that the extension can restore preferences more reliably.
+
+4. How the Information Is Used
+
+The stored information is used only to operate the Extension's features, including:
+
+- saving and restoring notes
+- restoring timer state
+- showing timer completion notifications
+- remembering language, theme, and notification preferences
+
+5. No Remote Collection
+
+The Extension does not transmit notes, timer data, or settings to the developer's own servers.
+The Extension does not collect account information, passwords, payment information, precise location, health data, browsing history, or web page content.
+
+6. Permissions
+
+The Extension uses the following Chrome permissions only for product functionality:
+
+- storage: to save notes, timer state, and settings
+- unlimitedStorage: to allow local note storage without tight default quota limits
+- alarms: to run the timer reliably
+- notifications: to show timer completion alerts
+- offscreen: to play timer alarm audio when needed
+- sidePanel: to run the extension inside the Chrome side panel
+
+7. Data Sharing
+
+The Extension does not sell, rent, or share personal information with data brokers or advertisers.
+The Extension does not share stored note content with third parties, except where Chrome itself processes extension storage as part of the browser platform.
+
+8. Data Retention and User Control
+
+Data remains stored until the user edits, deletes, resets, or uninstalls the Extension.
+Users can remove stored notes and preferences from within the Extension or by removing the Extension from Chrome.
+
+9. Security
+
+The Extension is designed to keep user content inside the browser storage environment. However, no method of storage or transmission can be guaranteed to be 100 percent secure.
+
+10. Children's Privacy
+
+The Extension is not directed to children under 13, and the developer does not knowingly collect personal information from children.
+
+11. Changes to This Policy
+
+This Privacy Policy may be updated from time to time. If it is updated, the revised version will be published with a new effective date.
+
+12. Contact
+
+If you have questions about this Privacy Policy, contact:
+
+Mustafa Burak Acarkan – Endor Bilişim
+info@endorbilisim.com
