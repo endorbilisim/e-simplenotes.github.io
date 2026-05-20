@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>e.Simple Notes – Privacy Policy</title>
+    <title>e.Simple Notes - Privacy Policy</title>
     <style>
       *,
       *::before,
@@ -117,7 +117,7 @@
       }
 
       ul li::before {
-        content: "–";
+        content: "-";
         position: absolute;
         left: 0;
         color: #5a60ad;
@@ -179,7 +179,7 @@
 
     <main>
       <div class="card">
-        <span class="effective-date">Effective date: May 3, 2026</span>
+        <span class="effective-date">Effective date: May 20, 2026</span>
 
         <p class="intro">
           This Privacy Policy explains how <strong>e.Simple Notes</strong> ("the
@@ -190,7 +190,7 @@
         <section>
           <h2><span class="num">1</span> Data Controller</h2>
           <div class="contact-block">
-            <strong>Mustafa Burak Acarkan</strong> – Endor Bilişim<br />
+            <strong>Mustafa Burak Acarkan</strong>, Endor Bili&#351;im<br />
             <a href="mailto:info@endorbilisim.com">info@endorbilisim.com</a
             ><br />
             Esentepe Mahallesi Talatpaşa Caddesi No: 5 / 1<br />
@@ -204,13 +204,14 @@
           <h2><span class="num">2</span> Summary</h2>
           <p>
             e.Simple Notes is a Chrome side panel extension that provides notes,
-            calculator, timer, theme, language, and notification preferences.
+            calculator, timer, AI chat, theme, language, and notification preferences.
           </p>
           <div class="summary-badges">
             <span class="badge">No personal data sold</span>
             <span class="badge">No advertising SDKs</span>
             <span class="badge">No third-party analytics</span>
-            <span class="badge">No external server transmission</span>
+            <span class="badge">No developer-side data collection</span>
+            <span class="badge">AI chat: BYOK, no developer access</span>
           </div>
         </section>
 
@@ -230,6 +231,11 @@
             </li>
             <li>App preferences such as language and notification settings</li>
             <li>Theme preference stored in browser local storage</li>
+            <li>
+              User-provided AI API key (stored in Chrome local extension storage
+              on the user's own device only; never synced to Chrome sync storage
+              or transmitted to the developer)
+            </li>
           </ul>
           <p style="margin-top: 0.65rem">
             Depending on Chrome availability and quota behavior, some settings
@@ -255,62 +261,164 @@
 
         <!-- 5 -->
         <section>
-          <h2><span class="num">5</span> No Remote Collection</h2>
+          <h2><span class="num">5</span> No Developer-Side Data Collection</h2>
           <p>
-            The Extension does not transmit notes, timer data, or settings to
-            the developer's own servers.
+            The Extension does not transmit notes, timer data, settings, or any
+            other stored content to the developer's own servers.
           </p>
           <p style="margin-top: 0.5rem">
             The Extension does not collect account information, passwords,
             payment information, precise location, health data, browsing
-            history, or web page content.
+            history, or web page content on behalf of the developer.
+          </p>
+          <p style="margin-top: 0.5rem">
+            When the optional AI chat feature is used, the user's messages are
+            sent directly from the browser to the selected AI provider's API
+            endpoint. This communication occurs between the user's browser and
+            the AI provider. The developer does not receive, log, or process
+            any of this data. See Section 6 for details.
           </p>
         </section>
 
         <!-- 6 -->
         <section>
-          <h2><span class="num">6</span> Permissions</h2>
+          <h2><span class="num">6</span> AI Chat: Bring Your Own Key (BYOK)</h2>
+          <p>
+            The Extension includes an optional AI chat panel. To activate it,
+            the user must provide their own API key from a supported provider.
+            The following providers are currently supported:
+          </p>
+          <ul style="margin-top: 0.5rem">
+            <li>OpenAI (api.openai.com)</li>
+            <li>Anthropic (api.anthropic.com)</li>
+            <li>Google Gemini (generativelanguage.googleapis.com)</li>
+            <li>DeepSeek (api.deepseek.com)</li>
+          </ul>
+          <p style="margin-top: 0.65rem">
+            The following applies to this feature:
+          </p>
+          <ul style="margin-top: 0.5rem">
+            <li>
+              The user's API key is stored only in Chrome local extension
+              storage on the user's own device. It is never sent to the
+              developer's servers.
+            </li>
+            <li>
+              When the user sends a message, that message (and conversation
+              history for the current session) is transmitted directly from the
+              user's browser to the selected AI provider's API endpoint using
+              the user's own API key.
+            </li>
+            <li>
+              If the user explicitly enables the <strong>"Include page context"</strong>
+              toggle, the visible text of the currently active browser tab is
+              extracted and appended to the outgoing request. This page text is
+              sent to the AI provider, not to the developer.
+            </li>
+            <li>
+              Conversation history is kept in memory for the current session
+              only and is not persisted to any storage after the session ends.
+            </li>
+            <li>
+              The developer does not receive, intercept, log, or store any chat
+              messages, API keys, or page content.
+            </li>
+          </ul>
+          <p style="margin-top: 0.65rem">
+            Each AI provider's own privacy policy governs how that provider
+            handles the data it receives:
+          </p>
+          <ul class="no-bullets" style="margin-top: 0.5rem">
+            <li>OpenAI: <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer">openai.com/policies/privacy-policy</a></li>
+            <li>Anthropic: <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener noreferrer">anthropic.com/privacy</a></li>
+            <li>Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></li>
+            <li>DeepSeek: <a href="https://www.deepseek.com/privacy" target="_blank" rel="noopener noreferrer">deepseek.com/privacy</a></li>
+          </ul>
+        </section>
+
+        <!-- 7 -->
+        <section>
+          <h2><span class="num">7</span> Permissions</h2>
           <p>
             The Extension uses the following Chrome permissions only for product
             functionality:
           </p>
           <ul>
             <li>
-              <strong>storage</strong> – to save notes, timer state, and
+              <strong>storage</strong>: to save notes, timer state, and
               settings
             </li>
             <li>
-              <strong>unlimitedStorage</strong> – to allow local note storage
+              <strong>unlimitedStorage</strong>: to allow local note storage
               without tight default quota limits
             </li>
-            <li><strong>alarms</strong> – to run the timer reliably</li>
+            <li><strong>alarms</strong>: to run the timer reliably</li>
             <li>
-              <strong>notifications</strong> – to show timer completion alerts
+              <strong>notifications</strong>: to show timer completion alerts
             </li>
             <li>
-              <strong>offscreen</strong> – to play timer alarm audio when needed
+              <strong>offscreen</strong>: to play timer alarm audio when needed
             </li>
             <li>
-              <strong>sidePanel</strong> – to run the extension inside the
+              <strong>sidePanel</strong>: to run the extension inside the
               Chrome side panel
             </li>
+            <li>
+              <strong>activeTab</strong>: to identify the currently active
+              browser tab when the user explicitly enables the "Include page
+              context" feature in AI chat
+            </li>
+            <li>
+              <strong>scripting</strong>: to extract the visible text of the
+              current page when the user explicitly enables the "Include page
+              context" feature in AI chat
+            </li>
+          </ul>
+          <p style="margin-top: 0.65rem">
+            The Extension also declares the following host permissions, which
+            are required solely to allow the browser to communicate with
+            user-selected AI provider APIs and to support the page context
+            feature:
+          </p>
+          <ul>
+            <li>
+              <strong>&lt;all_urls&gt;</strong>: required to allow the scripting
+              API to read the visible text of the currently active browser tab
+              when the user enables the "Include page context" feature. Because
+              the Extension runs inside a Chrome side panel rather than a
+              standard browser action popup, the activeTab permission alone does
+              not grant on-demand scripting access to the active tab; a broad
+              host permission is therefore necessary. No background browsing,
+              passive tab monitoring, or data collection occurs.
+            </li>
+            <li>https://api.openai.com/*</li>
+            <li>https://api.anthropic.com/*</li>
+            <li>https://generativelanguage.googleapis.com/*</li>
+            <li>https://api.deepseek.com/*</li>
           </ul>
         </section>
 
-        <!-- 7 -->
+        <!-- 8 -->
         <section>
-          <h2><span class="num">7</span> Data Sharing</h2>
+          <h2><span class="num">8</span> Data Sharing</h2>
           <p>
             The Extension does not sell, rent, or share personal information
             with data brokers or advertisers. The Extension does not share
             stored note content with third parties, except where Chrome itself
             processes extension storage as part of the browser platform.
           </p>
+          <p style="margin-top: 0.5rem">
+            When the user chooses to use the AI chat feature and sends a
+            message, that message is shared with the AI provider selected by
+            the user (OpenAI, Anthropic, Google Gemini, or DeepSeek). This
+            sharing is initiated solely by the user's own action and is governed
+            by the respective provider's privacy policy.
+          </p>
         </section>
 
-        <!-- 8 -->
+        <!-- 9 -->
         <section>
-          <h2><span class="num">8</span> Data Retention and User Control</h2>
+          <h2><span class="num">9</span> Data Retention and User Control</h2>
           <p>
             Data remains stored until the user edits, deletes, resets, or
             uninstalls the Extension. Users can remove stored notes and
@@ -319,9 +427,9 @@
           </p>
         </section>
 
-        <!-- 9 -->
+        <!-- 10 -->
         <section>
-          <h2><span class="num">9</span> Security</h2>
+          <h2><span class="num">10</span> Security</h2>
           <p>
             The Extension is designed to keep user content inside the browser
             storage environment. However, no method of storage or transmission
@@ -329,9 +437,9 @@
           </p>
         </section>
 
-        <!-- 10 -->
+        <!-- 11 -->
         <section>
-          <h2><span class="num">10</span> Children's Privacy</h2>
+          <h2><span class="num">11</span> Children's Privacy</h2>
           <p>
             The Extension is not directed to children under 13, and the
             developer does not knowingly collect personal information from
@@ -339,9 +447,9 @@
           </p>
         </section>
 
-        <!-- 11 -->
+        <!-- 12 -->
         <section>
-          <h2><span class="num">11</span> Changes to This Policy</h2>
+          <h2><span class="num">12</span> Changes to This Policy</h2>
           <p>
             This Privacy Policy may be updated from time to time. If it is
             updated, the revised version will be published with a new effective
@@ -349,11 +457,11 @@
           </p>
         </section>
 
-        <!-- 12 -->
+        <!-- 13 -->
         <section>
-          <h2><span class="num">12</span> Contact</h2>
+          <h2><span class="num">13</span> Contact</h2>
           <div class="contact-block">
-            <strong>Mustafa Burak Acarkan</strong> – Endor Bilişim<br />
+            <strong>Mustafa Burak Acarkan</strong>, Endor Bili&#351;im<br />
             <a href="mailto:info@endorbilisim.com">info@endorbilisim.com</a>
           </div>
         </section>
