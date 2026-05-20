@@ -231,6 +231,8 @@
             </li>
             <li>App preferences such as language and notification settings</li>
             <li>Theme preference stored in browser local storage</li>
+            <li>Note labels created by the user</li>
+            <li>Selected AI provider preference (stored locally only)</li>
             <li>
               User-provided AI API key (stored in Chrome local extension storage
               on the user's own device only; never synced to Chrome sync storage
@@ -238,9 +240,11 @@
             </li>
           </ul>
           <p style="margin-top: 0.65rem">
-            Depending on Chrome availability and quota behavior, some settings
+            The Extension includes an optional user-controlled sync setting. When
+            the user enables this setting, preferences (excluding the AI API key)
             may also be mirrored to Chrome sync storage so that the extension
-            can restore preferences more reliably.
+            can restore preferences more reliably across devices. The AI API key
+            is never written to Chrome sync storage regardless of this setting.
           </p>
         </section>
 
@@ -252,7 +256,7 @@
             features, including:
           </p>
           <ul>
-            <li>saving and restoring notes</li>
+            <li>saving and restoring notes and note labels</li>
             <li>restoring timer state</li>
             <li>showing timer completion notifications</li>
             <li>remembering language, theme, and notification preferences</li>
