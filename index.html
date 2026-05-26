@@ -179,7 +179,7 @@
 
     <main>
       <div class="card">
-        <span class="effective-date">Effective date: May 20, 2026</span>
+        <span class="effective-date">Effective date: May 26, 2026</span>
 
         <p class="intro">
           This Privacy Policy explains how <strong>e.Simple Notes</strong> ("the
@@ -204,7 +204,8 @@
           <h2><span class="num">2</span> Summary</h2>
           <p>
             e.Simple Notes is a Chrome side panel extension that provides notes,
-            calculator, timer, AI chat, theme, language, and notification preferences.
+            calculator, timer, AI chat, theme, language, and notification
+            preferences.
           </p>
           <div class="summary-badges">
             <span class="badge">No personal data sold</span>
@@ -240,11 +241,12 @@
             </li>
           </ul>
           <p style="margin-top: 0.65rem">
-            The Extension includes an optional user-controlled sync setting. When
-            the user enables this setting, preferences (excluding the AI API key)
-            may also be mirrored to Chrome sync storage so that the extension
-            can restore preferences more reliably across devices. The AI API key
-            is never written to Chrome sync storage regardless of this setting.
+            The Extension includes an optional user-controlled sync setting.
+            When the user enables this setting, preferences (excluding the AI
+            API key) may also be mirrored to Chrome sync storage so that the
+            extension can restore preferences more reliably across devices. The
+            AI API key is never written to Chrome sync storage regardless of
+            this setting.
           </p>
         </section>
 
@@ -279,8 +281,8 @@
             When the optional AI chat feature is used, the user's messages are
             sent directly from the browser to the selected AI provider's API
             endpoint. This communication occurs between the user's browser and
-            the AI provider. The developer does not receive, log, or process
-            any of this data. See Section 6 for details.
+            the AI provider. The developer does not receive, log, or process any
+            of this data. See Section 6 for details.
           </p>
         </section>
 
@@ -308,13 +310,24 @@
               developer's servers.
             </li>
             <li>
+              When the user saves an API key in settings, the Extension performs
+              an optional one-time health check by sending a lightweight
+              authenticated request to the selected provider's public model
+              listing endpoint (for example, <code>/v1/models</code>) to verify
+              that the key is valid. This request contains only the user's own
+              API key. No notes, messages, page content, or personal data are
+              included. The request goes directly from the user's browser to the
+              selected AI provider, not to the developer.
+            </li>
+            <li>
               When the user sends a message, that message (and conversation
               history for the current session) is transmitted directly from the
               user's browser to the selected AI provider's API endpoint using
               the user's own API key.
             </li>
             <li>
-              If the user explicitly enables the <strong>"Include page context"</strong>
+              If the user explicitly enables the
+              <strong>"Include page context"</strong>
               toggle, the visible text of the currently active browser tab is
               extracted and appended to the outgoing request. This page text is
               sent to the AI provider, not to the developer.
@@ -333,10 +346,42 @@
             handles the data it receives:
           </p>
           <ul class="no-bullets" style="margin-top: 0.5rem">
-            <li>OpenAI: <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer">openai.com/policies/privacy-policy</a></li>
-            <li>Anthropic: <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener noreferrer">anthropic.com/privacy</a></li>
-            <li>Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></li>
-            <li>DeepSeek: <a href="https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html" target="_blank" rel="noopener noreferrer">cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html</a></li>
+            <li>
+              OpenAI:
+              <a
+                href="https://openai.com/policies/privacy-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+                >openai.com/policies/privacy-policy</a
+              >
+            </li>
+            <li>
+              Anthropic:
+              <a
+                href="https://www.anthropic.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                >anthropic.com/privacy</a
+              >
+            </li>
+            <li>
+              Google:
+              <a
+                href="https://policies.google.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                >policies.google.com/privacy</a
+              >
+            </li>
+            <li>
+              DeepSeek:
+              <a
+                href="https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html</a
+              >
+            </li>
           </ul>
         </section>
 
@@ -349,8 +394,7 @@
           </p>
           <ul>
             <li>
-              <strong>storage</strong>: to save notes, timer state, and
-              settings
+              <strong>storage</strong>: to save notes, timer state, and settings
             </li>
             <li>
               <strong>unlimitedStorage</strong>: to allow local note storage
@@ -364,8 +408,8 @@
               <strong>offscreen</strong>: to play timer alarm audio when needed
             </li>
             <li>
-              <strong>sidePanel</strong>: to run the extension inside the
-              Chrome side panel
+              <strong>sidePanel</strong>: to run the extension inside the Chrome
+              side panel
             </li>
             <li>
               <strong>activeTab</strong>: to identify the currently active
@@ -412,11 +456,38 @@
             processes extension storage as part of the browser platform.
           </p>
           <p style="margin-top: 0.5rem">
-            When the user chooses to use the AI chat feature and sends a
-            message, that message is shared with the AI provider selected by
-            the user (OpenAI, Anthropic, Google Gemini, or DeepSeek). This
-            sharing is initiated solely by the user's own action and is governed
-            by the respective provider's privacy policy.
+            The Extension shares user data with third parties only in the
+            following user-initiated scenarios:
+          </p>
+          <ul style="margin-top: 0.5rem">
+            <li>
+              <strong>AI provider API requests:</strong> When the user enables
+              the AI chat feature and saves an API key, or sends a chat message,
+              the following data is sent directly from the user's browser to the
+              AI provider selected by the user (OpenAI, Anthropic, Google
+              Gemini, or DeepSeek):
+              <ul style="margin-top: 0.35rem">
+                <li>the user's own API key (for authentication)</li>
+                <li>the chat messages typed by the user</li>
+                <li>the current session's conversation history</li>
+                <li>
+                  if the "Include page context" toggle is explicitly enabled by
+                  the user: the visible text of the currently active browser tab
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p style="margin-top: 0.65rem">
+            All such requests are initiated solely by the user's own action. The
+            data is sent directly from the user's browser to the selected
+            provider and is governed by that provider's privacy policy (linked
+            in Section 6). The developer of this Extension does not receive,
+            intercept, proxy, log, or store any of this data.
+          </p>
+          <p style="margin-top: 0.5rem">
+            No user data is shared with any other third party. The Extension
+            does not use any third-party analytics, advertising, telemetry, or
+            crash reporting services.
           </p>
         </section>
 
